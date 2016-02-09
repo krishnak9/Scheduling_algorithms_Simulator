@@ -17,4 +17,4 @@ A simulator C program which emulates the process queue according to the algorith
 4. Run the program using command "./sjfemulator".<br>
 5. Enter input filename.<br>
 6. Simulated process sequence will be produced.
-
+![alt tag](https://raw.github.com/krishnak9/Scheduling_algorithms_Simulator/master/exampleganttoutput.png)
