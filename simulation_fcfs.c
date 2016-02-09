@@ -1,6 +1,13 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#define RE     "\x1b[31m"
+#define GR   "\x1b[32m"
+#define YE  "\x1b[33m"
+#define BL    "\x1b[34m"
+#define MA "\x1b[35m"
+#define CY    "\x1b[36m"
+#define RESET   "\x1b[0m"
 struct node{
       char process[3];
       int arrt;
@@ -122,12 +129,32 @@ int main(){
               
             
                r = point->bt;
-               while(r--){
-                   printf("||");
+               if(col==0){
+                while(r--){
+                printf( CY "||" RESET);
                 }
-              
-              printf("--");
-              
+               }
+               if(col==1){
+                while(r--){
+                printf( RE "||" RESET);
+                  }
+                }
+              if(col==2){
+                while(r--){
+                printf( GR "||" RESET);
+                }
+               }
+              if(col==3){
+                while(r--){
+                printf( MA "||" RESET);
+                }
+              }
+              if(col==4){
+              while(r--){
+                printf( YE "||" RESET);
+                }
+              }
+              col = (col+1)%5;
 
                point=point->link;
               
